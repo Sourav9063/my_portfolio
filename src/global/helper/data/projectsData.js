@@ -307,6 +307,127 @@ const projectsData = {
 
     // ]
   },
+  "Dashboard Foundation": {
+    title: "Dashboard Foundation",
+    images: [],
+    links: ["https://pathao.com"],
+    description:
+      "Engineered enterprise NextJs framework with OpenAPI-driven type generation and Zod validation, powering rapid cross-sector development with shadcn UI, centralized auth/RBAC, and embedded AI guardrails.",
+    tech: ["NextJS", "OpenAPI", "Zod", "shadcn UI"],
+  },
+  "Pathao Map": {
+    title: "Pathao Map",
+    images: [],
+    links: ["https://maps.pathao.io/"],
+    description:
+      "Architected microservices-based community platform (Alexander) with RBAC for gathering and validating POIs serving 100K+ daily users.",
+    tech: ["GoLang", "VueJS", "NuxtJS", "Docker"],
+  },
+  Loop: {
+    title: "Loop",
+    images: [],
+    links: ["https://pathao.com"],
+    description:
+      "Built campaign management platform handling marketing operations across all services with bulk XLSX uploads, robust file handling, and real-time analytics.",
+    tech: ["NextJS", "Go", "PostgreSQL"],
+  },
+  Mission: {
+    title: "Mission",
+    images: [],
+    links: ["https://pathao.com"],
+    description:
+      "Developed gamification platform with event-based listeners rewarding users for action streaks. Built dashboard for mission entry, phase goal management, and analytics.",
+    tech: ["NextJS", "Go", "PostgreSQL", "Redis", "BigQuery"],
+  },
+  "Resto Web": {
+    title: "Resto Web",
+    images: [],
+    links: ["https://restoweb.p-stageenv.xyz/"],
+    description:
+      "Engineered restaurant SaaS with WebSocket real-time notifications, dynamic menus, and analytics dashboard.",
+    tech: ["NextJS", "Zod", "TypeScript", "WebSocket"],
+  },
+  "Year End Wrap": {
+    title: "Year End Wrap",
+    images: [],
+    links: [
+      "https://wrapped.pathao.com/eyJvcmQiOlsyNjMsMTAsMCwyMiwwLDFdLCJ1c2ciOlsxMTk0NjQsMjc5MzMuNjIsInAiXSwiY2lkIjoxLCJ1dCI6ImEiLCJtZSI6WyJyIiwiciIsMTkwMV0sInAiOiJiL3ZldGVyYW4ifQ==",
+    ],
+    description:
+      "Engineered interactive 2025 wrap experience integrated without app updates. Optimized assets and solved critical cross-platform (iOS/Android) compatibility issues.",
+    tech: ["NextJS", "TypeScript"],
+  },
+  GariKoi: {
+    title: "GariKoi",
+    images: [],
+    links: ["https://pathao.com"],
+    description:
+      "Developed real-time geo tracking system visualizing driver locations, allocation/deallocation for operations.",
+    tech: ["NextJS", "Go", "Google Maps API"],
+  },
+  Mapsense: {
+    title: "Mapsense",
+    images: [],
+    links: ["https://pathao.com"],
+    description:
+      "Built Chrome Extension and web tool to flag route anomalies, comparing actual vs suggested routes to detect map mismatches against prominent providers for ops to fix Pathao map.",
+    tech: ["NextJS", "TypeScript", "PostgreSQL"],
+  },
+  Mapage: {
+    title: "Mapage",
+    images: [],
+    links: ["https://mapage.net/stylist/landing-page"],
+    description:
+      "Built real-time communication system for reservation/payment platform with optimistic updates and conflict resolution.",
+    tech: ["Socket.IO", "NextJS", "MongoDB"],
+  },
+  UUORK: {
+    title: "UUORK",
+    images: [],
+    links: ["https://shellbeehaken.com/portfolio/8"],
+    description:
+      "Engineered cross-platform workspace app (ElectronJs + NextJs) with JWT authentication, real-time collaboration, and responsive design.",
+    tech: ["NextJS", "ElectronJS"],
+  },
+  Honnemir: {
+    title: "Honnemir",
+    images: [],
+    links: ["https://shellbeehaken.com/portfolio/6"],
+    description:
+      "Developed multimedia voting platform with GraphQL API, AWS Amplify, and S3 upload pipeline.",
+    tech: ["NextJS", "GraphQL", "AWS Amplify"],
+  },
+  KriyaKarak: {
+    title: "KriyaKarak",
+    images: [],
+    links: ["https://kriyakarak.com/"],
+    description:
+      "Implemented payment disbursement system with automated payouts and reconciliation dashboard for creative marketplace.",
+    tech: ["NextJS", "MongoDB"],
+  },
+  "Flash VSCode": {
+    title: "Flash VSCode",
+    images: [],
+    links: [
+      "https://github.com/Sourav9063",
+      "https://marketplace.visualstudio.com/items?itemName=souravahmed.flash-vscode-latest",
+      "https://open-vsx.org/extension/souravahmed/flash-vscode-latest",
+    ],
+    description:
+      "Published extension porting flash.nvim navigation to VS Code with 1500+ installs, 5-star rating, intelligent search, and multi-cursor support. Available on Open VSX.",
+    tech: ["TypeScript", "VSCode API"],
+  },
+  "IPA Transcription of Bengali Texts": {
+    title: "IPA Transcription of Bengali Texts (arXiv 2024)",
+    images: [],
+    links: [
+      "https://arxiv.org/abs/2403.20084",
+      "https://github.com/Sourav9063/IPA",
+    ],
+    description:
+      "Standardized Bengali IPA phonetic transcription with novel dataset and deep learning model advancing NLP for low-resource languages. Datasets: DUALIPA (156k+ validated sentences) and Regional IPA (7 dialects).",
+    tech: ["Python", "TensorFlow", "NLP", "Pandas"],
+  },
 };
 
 module.exports = projectsData;

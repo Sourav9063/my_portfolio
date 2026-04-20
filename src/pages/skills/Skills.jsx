@@ -116,14 +116,12 @@ export default function Skills() {
                 <div className={`${style.card_info_title}`}>
                   <h3>Framework & Library</h3>
                   <h4>
-                    - ReactJS
-                    <br></br> - NextJS <br></br> - ElectronJS <br></br> -
-                    ExpressJS <br></br> - NodeJS <br></br> - Flutter
-                    <br></br>- Android Studio <br></br> - Arduino <br></br> -
-                    MySQL <br></br> - MongoDB
-                    <br></br> - Firebase <br></br>- Git & GitHub <br></br> -
-                    Docker
-                    <br></br> - Unity
+                    - NextJS <br></br> - ReactJS <br></br> - GoLang <br></br> -
+                    NuxtJS / VueJS <br></br> - NodeJS / ExpressJS <br></br> -
+                    ElectronJS <br></br> - Socket.IO <br></br> - PostgreSQL{" "}
+                    <br></br> - MySQL <br></br> - MongoDB <br></br> - Redis{" "}
+                    <br></br> - BigQuery <br></br> - Docker <br></br> - AWS
+                    Amplify / S3 <br></br> - Firebase <br></br> - Git & GitHub
                   </h4>
                 </div>
               </div>

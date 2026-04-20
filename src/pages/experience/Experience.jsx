@@ -107,49 +107,93 @@ export default function Experience() {
 
 function ExperienceHome() {
   return (
-    <div className={styles["experiment-home"]}>
-      <div className={styles["back-text-white"]}>Experiences</div>
-      <div>
-        {data.Experiences.map((el, index) => {
-          return <div key={index}>{el.at+", "+el.pos}</div>;
-        })}
-      </div>
-    </div>
-  );
-}
-function AchievementHome() {
-  return (
-    <div className={styles["achievement-home"]}>
-      <div className={styles["back-text-white"]}>Achievements</div>
-      <div>
-        {data.Achievements.map((el, index) => {
-          return <div key={index}>{el.at}</div>;
-        })}
-      </div>
-    </div>
-  );
-}
-function CoCurricularHome() {
-  return (
-    <div className={styles["achievement-home"]}>
-      <div className={styles["back-text-white"]}>Co-curriculars</div>
-      <div>
-        {data.CoCurriculars.map((el, index) => {
-          return <div key={index}>{el.at}</div>;
-        })}
-      </div>
+    <div className={styles["timeline-wrapper"]}>
+      <h2 className={styles["section-title"]}>Experiences</h2>
+      <ol className={styles["timeline"]}>
+        {[...data.Experiences].reverse().map((el, index) => (
+          <li className={styles["timeline-item"]} key={index}>
+            <span className={styles["timeline-dot"]} />
+            <div className={styles["timeline-card"]}>
+              <span className={styles["date-pill"]}>
+                {el.from} — {el.to}
+              </span>
+              <h3 className={styles["item-title"]}>{el.pos}</h3>
+              <p className={styles["item-org"]}>{el.at}</p>
+              {el.desc && <p className={styles["item-desc"]}>{el.desc}</p>}
+            </div>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }
 
 function EducationHome() {
   return (
-    <div className={styles["education-home"]}>
-      <div className={styles["back-text-white"]}>Educations</div>
-      <div>
-        {data.Educations.map((el, index) => {
-          return <div key={index}>{el.at}</div>;
-        })}
+    <div className={styles["timeline-wrapper"]}>
+      <h2 className={styles["section-title"]}>Educations</h2>
+      <ol className={styles["timeline"]}>
+        {[...data.Educations].reverse().map((el, index) => (
+          <li className={styles["timeline-item"]} key={index}>
+            <span
+              className={`${styles["timeline-dot"]} ${styles["dot-edu"]}`}
+            />
+            <div className={styles["timeline-card"]}>
+              <span
+                className={`${styles["date-pill"]} ${styles["pill-edu"]}`}
+              >
+                {el.from} — {el.to}
+              </span>
+              <h3 className={styles["item-title"]}>{el.pos}</h3>
+              <p className={styles["item-org"]}>{el.at}</p>
+              {el.desc && <p className={styles["item-desc"]}>{el.desc}</p>}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+function AchievementHome() {
+  return (
+    <div className={styles["timeline-wrapper"]}>
+      <h2 className={styles["section-title"]}>Achievements</h2>
+      <div className={styles["card-grid"]}>
+        {data.Achievements.map((el, index) => (
+          <div key={index} className={styles["badge-card"]}>
+            <div className={styles["badge-icon"]}>★</div>
+            <span className={styles["date-pill"]}>{el.from}</span>
+            <h3 className={styles["item-title"]}>{el.pos}</h3>
+            <p className={styles["item-org"]}>{el.at}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CoCurricularHome() {
+  return (
+    <div className={styles["timeline-wrapper"]}>
+      <h2 className={styles["section-title"]}>Co-curriculars</h2>
+      <div className={styles["card-grid"]}>
+        {data.CoCurriculars.map((el, index) => (
+          <div key={index} className={styles["badge-card"]}>
+            <div
+              className={`${styles["badge-icon"]} ${styles["icon-co"]}`}
+            >
+              ◆
+            </div>
+            <span
+              className={`${styles["date-pill"]} ${styles["pill-co"]}`}
+            >
+              {el.from}
+              {el.to ? ` — ${el.to}` : ""}
+            </span>
+            <h3 className={styles["item-title"]}>{el.at}</h3>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -160,31 +204,43 @@ const data = {
     {
       at: "ShellBeeHaken Ltd.",
       pos: "Intern Software Engineer",
-      from: "February 2023",
-      to: "July 2023",
+      from: "Feb 2023",
+      to: "Aug 2023",
+      desc: "Shipped features and fixed critical bugs across multiple production codebases with agile processes.",
       images: [""],
       logo: "",
     },
     {
       at: "ShellBeeHaken Ltd.",
       pos: "Associate Software Engineer",
-      from: "July 2023",
-      to: "December 2024",
+      from: "Aug 2023",
+      to: "Nov 2024",
+      desc: "Promoted to full-time after delivering production applications across diverse business domains.",
       images: [""],
       logo: "",
     },
     {
       at: "Pathao Ltd.",
-      pos: "Software Engineer L1",
-      from: "December 2024",
+      pos: "Software Engineer I",
+      from: "Dec 2024",
+      to: "Jan 2026",
+      desc: "Full-stack across mapping, campaign mgmt and real-time systems serving 100K+ daily users.",
+      images: [""],
+      logo: "",
+    },
+    {
+      at: "Pathao Ltd.",
+      pos: "Software Engineer II (Promoted)",
+      from: "Feb 2026",
       to: "Current",
+      desc: "Promoted; contributing to Super AI team's LLM integration efforts alongside platform work.",
       images: [""],
       logo: "",
     },
   ],
   //   Shahjalal University of Science and Technology (SUST)
   //   Institute of Information and Communication Technology (IICT)
-  // CGPA: 3.61 (till 3rd year 2nd semester)
+  // CGPA: 3.64/4.00, Ranked 2nd in class
 
   // Notre Dame College, Dhaka, Bangladesh.
   // HSC GPA: 5
@@ -194,17 +250,19 @@ const data = {
 
   Educations: [
     {
-      at: "Shahjalal University of Science and Technology (SUST)",
-      from: "2018",
-      to: "2023",
+      at: "Shahjalal University of Science and Technology (SUST), IICT",
+      from: "2019",
+      to: "2024",
       pos: "B.Sc. in Software Engineering",
+      desc: "CGPA 3.64/4.00 — Ranked 2nd in class (all courses cleared on first attempt).",
       images: [],
     },
     {
-      at: "Notre Dame College, Dhaka, Bangladesh.",
+      at: "Notre Dame College, Dhaka, Bangladesh",
       from: "2018",
       to: "2019",
       pos: "Higher Secondary Certificate (HSC)",
+      desc: "GPA 5.00",
       images: [],
     },
     {
@@ -212,6 +270,7 @@ const data = {
       from: "2012",
       to: "2018",
       pos: "Secondary School Certificate (SSC)",
+      desc: "GPA 5.00",
       images: [],
     },
   ],
