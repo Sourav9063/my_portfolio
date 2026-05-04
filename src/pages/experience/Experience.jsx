@@ -1,6 +1,13 @@
 import React from "react";
 import styles from "./Experience.module.css";
 import { useScrollPosition } from "../../global/provider/GlobalProvider";
+import { HOME_SECTION_SCROLL_CENTER } from "../home/scrollSections";
+
+const EXPERIENCE_SCROLL_CENTER = HOME_SECTION_SCROLL_CENTER.EXPERIENCE;
+const EXPERIENCE_INTRO_DISTANCE = 30;
+const EXPERIENCE_INTRO_START =
+  EXPERIENCE_SCROLL_CENTER - EXPERIENCE_INTRO_DISTANCE;
+const EXPERIENCE_INITIAL_OFFSET = 35;
 
 export default function Experience() {
   const [scrollPositionOfElement] = useScrollPosition();
@@ -12,8 +19,12 @@ export default function Experience() {
             className={styles["back-white"]}
             style={{
               opacity: ` ${
-                scrollPositionOfElement > 470
-                  ? Math.min(1, (scrollPositionOfElement - 470) / 30)
+                scrollPositionOfElement > EXPERIENCE_INTRO_START
+                  ? Math.min(
+                      1,
+                      (scrollPositionOfElement - EXPERIENCE_INTRO_START) /
+                        EXPERIENCE_INTRO_DISTANCE
+                    )
                   : 0
               }`,
             }}
@@ -43,9 +54,13 @@ export default function Experience() {
             className={styles["back-text"]}
             style={{
               transform: `translateX(${
-                scrollPositionOfElement > 470
-                  ? 20 * Math.max(500 - scrollPositionOfElement, 0)
-                  : 20 * 35
+                scrollPositionOfElement > EXPERIENCE_INTRO_START
+                  ? 20 *
+                    Math.max(
+                      EXPERIENCE_SCROLL_CENTER - scrollPositionOfElement,
+                      0
+                    )
+                  : 20 * EXPERIENCE_INITIAL_OFFSET
               }px)`,
             }}
           >
@@ -55,9 +70,13 @@ export default function Experience() {
             className={styles["back-text"]}
             style={{
               transform: `translateX(${
-                scrollPositionOfElement > 470
-                  ? 60 * Math.max(500 - scrollPositionOfElement, 0)
-                  : 60 * 35
+                scrollPositionOfElement > EXPERIENCE_INTRO_START
+                  ? 60 *
+                    Math.max(
+                      EXPERIENCE_SCROLL_CENTER - scrollPositionOfElement,
+                      0
+                    )
+                  : 60 * EXPERIENCE_INITIAL_OFFSET
               }px)`,
             }}
           >
@@ -67,9 +86,13 @@ export default function Experience() {
             className={styles["back-text"]}
             style={{
               transform: `translateX(${
-                scrollPositionOfElement > 470
-                  ? 40 * Math.max(500 - scrollPositionOfElement, 0)
-                  : 40 * 35
+                scrollPositionOfElement > EXPERIENCE_INTRO_START
+                  ? 40 *
+                    Math.max(
+                      EXPERIENCE_SCROLL_CENTER - scrollPositionOfElement,
+                      0
+                    )
+                  : 40 * EXPERIENCE_INITIAL_OFFSET
               }px)`,
             }}
           >
@@ -79,9 +102,13 @@ export default function Experience() {
             className={styles["back-text"]}
             style={{
               transform: `translateX(${
-                scrollPositionOfElement > 470
-                  ? 80 * Math.max(500 - scrollPositionOfElement, 0)
-                  : 80 * 35
+                scrollPositionOfElement > EXPERIENCE_INTRO_START
+                  ? 80 *
+                    Math.max(
+                      EXPERIENCE_SCROLL_CENTER - scrollPositionOfElement,
+                      0
+                    )
+                  : 80 * EXPERIENCE_INITIAL_OFFSET
               }px)`,
             }}
           >

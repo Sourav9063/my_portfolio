@@ -1,0 +1,19 @@
+export const SECTION_SCROLL_STEP = 100;
+export const SECTION_SCROLL_TRIGGER_RADIUS = 50;
+
+export const HOME_SECTION_SCROLL_CENTER = {
+  LANDING: 0,
+  ABOUT: SECTION_SCROLL_STEP,
+  PROJECTS: SECTION_SCROLL_STEP * 2,
+  WORK: SECTION_SCROLL_STEP * 3,
+  SKILLS: SECTION_SCROLL_STEP * 4,
+  STARS: SECTION_SCROLL_STEP * 5,
+  EXPERIENCE: SECTION_SCROLL_STEP * 6,
+  CONTACTS: SECTION_SCROLL_STEP * 7,
+};
+
+export const getSectionScrollTrigger = (sectionCenter) => ({
+  start: sectionCenter - SECTION_SCROLL_TRIGGER_RADIUS,
+  center: sectionCenter,
+  end: sectionCenter + SECTION_SCROLL_TRIGGER_RADIUS,
+});

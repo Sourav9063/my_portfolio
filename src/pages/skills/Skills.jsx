@@ -3,24 +3,48 @@ import style from "./Skills.module.css";
 import "../../global/css/global.css";
 import { useScrollPosition } from "../../global/provider/GlobalProvider";
 import { useEffect } from "react";
+import {
+  HOME_SECTION_SCROLL_CENTER,
+  getSectionScrollTrigger,
+} from "../home/scrollSections";
+
+const SKILLS_SCROLL_TRIGGER = getSectionScrollTrigger(
+  HOME_SECTION_SCROLL_CENTER.SKILLS
+);
+const SKILLS_BACKDROP_EXTRA_RADIUS = 5;
+const SKILLS_SCROLL_SNAP_RADIUS = 10;
+const SKILLS_SCROLL_UPDATE_THRESHOLD = 8;
 
 export default function Skills() {
   const cardsRef = React.useRef();
   const [scrollPositionOfElement] = useScrollPosition();
-  const [scrollPosition, setScrollPosition] = useState(245);
+  const [scrollPosition, setScrollPosition] = useState(
+    SKILLS_SCROLL_TRIGGER.start
+  );
   const backdropProgress = Math.min(
-    Math.max(1 - Math.abs(scrollPosition - 300) / 55, 0),
+    Math.max(
+      1 -
+        Math.abs(scrollPosition - SKILLS_SCROLL_TRIGGER.center) /
+          (SKILLS_SCROLL_TRIGGER.end -
+            SKILLS_SCROLL_TRIGGER.center +
+            SKILLS_BACKDROP_EXTRA_RADIUS),
+      0
+    ),
     1
   );
 
   useEffect(() => {
     if (
-      scrollPositionOfElement > 250 &&
-      scrollPositionOfElement < 350 &&
-      Math.abs(scrollPositionOfElement - scrollPosition) > 8
+      scrollPositionOfElement > SKILLS_SCROLL_TRIGGER.start &&
+      scrollPositionOfElement < SKILLS_SCROLL_TRIGGER.end &&
+      Math.abs(scrollPositionOfElement - scrollPosition) >
+        SKILLS_SCROLL_UPDATE_THRESHOLD
     ) {
-      if (scrollPositionOfElement > 290 && scrollPositionOfElement < 310) {
-        setScrollPosition(300);
+      if (
+        Math.abs(scrollPositionOfElement - SKILLS_SCROLL_TRIGGER.center) <
+        SKILLS_SCROLL_SNAP_RADIUS
+      ) {
+        setScrollPosition(SKILLS_SCROLL_TRIGGER.center);
       } else setScrollPosition(scrollPositionOfElement);
     }
     return () => {};
@@ -65,7 +89,9 @@ export default function Skills() {
         <div
           className={`${style.card} ${style.col13_row11}`}
           style={{
-            transform: `translateX(${scrollPosition - 300}%)`,
+            transform: `translateX(${
+              scrollPosition - SKILLS_SCROLL_TRIGGER.center
+            }%)`,
             transitionDelay: 100 + "ms",
           }}
         >
@@ -91,7 +117,9 @@ export default function Skills() {
         <div
           className={`${style.card} ${style.col25_row22}`}
           style={{
-            transform: `translateX(${scrollPosition - 300}%)`,
+            transform: `translateX(${
+              scrollPosition - SKILLS_SCROLL_TRIGGER.center
+            }%)`,
             transitionDelay: 320 * 1 + "ms",
           }}
         >
@@ -118,7 +146,9 @@ export default function Skills() {
         <div
           className={`${style.card} ${style.col11_row23}`}
           style={{
-            transform: `translateX(${scrollPosition - 300}%)`,
+            transform: `translateX(${
+              scrollPosition - SKILLS_SCROLL_TRIGGER.center
+            }%)`,
             transitionDelay: 320 * 2 + "ms",
           }}
         >
@@ -147,7 +177,9 @@ export default function Skills() {
         <div
           className={`${style.card} ${style.col45_row11}`}
           style={{
-            transform: `translateX(${scrollPosition - 300}%)`,
+            transform: `translateX(${
+              scrollPosition - SKILLS_SCROLL_TRIGGER.center
+            }%)`,
             transitionDelay: 320 * 3 + "ms",
           }}
         >
@@ -172,7 +204,9 @@ export default function Skills() {
         <div
           className={`${style.card} ${style.col23_row33}`}
           style={{
-            transform: `translateX(${scrollPosition - 300}%)`,
+            transform: `translateX(${
+              scrollPosition - SKILLS_SCROLL_TRIGGER.center
+            }%)`,
             transitionDelay: 320 * 4 + "ms",
           }}
         >
@@ -198,7 +232,9 @@ export default function Skills() {
         <div
           className={`${style.card} ${style.col34_row33}`}
           style={{
-            transform: `translateX(${scrollPosition - 300}%)`,
+            transform: `translateX(${
+              scrollPosition - SKILLS_SCROLL_TRIGGER.center
+            }%)`,
             transitionDelay: 320 * 5 + "ms",
           }}
         >

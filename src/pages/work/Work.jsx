@@ -2,10 +2,14 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import style from "./Work.module.css";
 import { clamp, randomRGBA } from "../../global/helper/function/ui";
 import { useScrollPosition } from "../../global/provider/GlobalProvider";
+import {
+  HOME_SECTION_SCROLL_CENTER,
+  getSectionScrollTrigger,
+} from "../home/scrollSections";
 
-const WORK_SCROLL_START = 250;
-const WORK_SCROLL_CENTER = 300;
-const WORK_SCROLL_END = 350;
+const WORK_SCROLL_TRIGGER = getSectionScrollTrigger(
+  HOME_SECTION_SCROLL_CENTER.WORK
+);
 
 const mainWork = [
   {
@@ -160,12 +164,12 @@ export default function Work() {
 
   useEffect(() => {
     const active =
-      scrollPositionOfElement > WORK_SCROLL_START &&
-      scrollPositionOfElement < WORK_SCROLL_END;
+      scrollPositionOfElement > WORK_SCROLL_TRIGGER.start &&
+      scrollPositionOfElement < WORK_SCROLL_TRIGGER.end;
     const nextProgress = clamp(
       1 -
-        Math.abs(scrollPositionOfElement - WORK_SCROLL_CENTER) /
-          (WORK_SCROLL_END - WORK_SCROLL_CENTER),
+        Math.abs(scrollPositionOfElement - WORK_SCROLL_TRIGGER.center) /
+          (WORK_SCROLL_TRIGGER.end - WORK_SCROLL_TRIGGER.center),
       0,
       1
     );
