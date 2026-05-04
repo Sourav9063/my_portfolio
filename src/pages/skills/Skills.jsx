@@ -106,7 +106,7 @@ export default function Skills() {
                   <h3>Problem Solving</h3>
                   <h4>
                     - Solved 700+ competitive programming problems in various
-                    online judges using C++ and Python.<br></br>- Have
+                    online judges using C++ and Python.<br/>- Have
                     intermediate-level Algorithm and Data Structure knowledge.
                   </h4>
                 </div>
@@ -162,12 +162,15 @@ export default function Skills() {
                 <div className={`${style.card_info_title}`}>
                   <h3>Framework & Library</h3>
                   <h4>
-                    - NextJS <br></br> - ReactJS <br></br> - GoLang <br></br> -
-                    NuxtJS / VueJS <br></br> - NodeJS / ExpressJS <br></br> -
-                    ElectronJS <br></br> - Socket.IO <br></br> - PostgreSQL{" "}
-                    <br></br> - MySQL <br></br> - MongoDB <br></br> - Redis{" "}
-                    <br></br> - BigQuery <br></br> - Docker <br></br> - AWS
-                    Amplify / S3 <br></br> - Firebase <br></br> - Git & GitHub
+                    - React <br/> - Next.js <br/> - Vue.js / Nuxt.js{" "}
+                    <br/> - Flutter <br/> - Tailwind CSS <br/> -
+                    Zod / shadcn/ui <br/> - Node.js / Express.js{" "}
+                    <br/> - GraphQL / REST API
+                    <br/> - WebSocket / Socket.IO <br/> - PostgreSQL{" "}
+                    <br/> - MongoDB <br/> - Redis <br/> - Firebase{" "}
+                    <br/> - BigQuery <br/> - Docker <br/> - AWS S3
+                    / Amplify <br/> - CI/CD / Git <br/> - Electron{" "}
+                    <br/> - OpenAPI / RBAC
                   </h4>
                 </div>
               </div>
@@ -193,8 +196,8 @@ export default function Skills() {
                 <div className={`${style.card_info_title}`}>
                   <h3>Programming Languages</h3>
                   <h4>
-                    - C++, C#, Java, Python, JavaScript(HTML,CSS), Dart, SQL,
-                    LATEX
+                    - C++, C#, JavaScript, TypeScript, Go (Golang), Python, Java, SQL,
+                    HTML5, CSS3
                   </h4>
                 </div>
               </div>
@@ -221,7 +224,7 @@ export default function Skills() {
                   <h3>Database design</h3>
                   <h4>
                     - Have a grasp on the path of Requirement analysis to
-                    Database design.<br></br>- Worked with both SQL and NoSQL
+                    Database design.<br/>- Worked with both SQL and NoSQL
                     databases
                   </h4>
                 </div>
@@ -249,7 +252,7 @@ export default function Skills() {
                   <h3>Design Pattern implementation</h3>
                   <h4>
                     - Familiar with different types of design patterns and
-                    refactoring processes. <br></br>- Loves to organize code for
+                    refactoring processes. <br/>- Loves to organize code for
                     future use.
                   </h4>
                 </div>
