@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import style from "./Skills.module.css";
 import "../../global/css/global.css";
 import { useScrollPosition } from "../../global/provider/GlobalProvider";
@@ -8,6 +8,10 @@ export default function Skills() {
   const cardsRef = React.useRef();
   const [scrollPositionOfElement] = useScrollPosition();
   const [scrollPosition, setScrollPosition] = useState(245);
+  const backdropProgress = Math.min(
+    Math.max(1 - Math.abs(scrollPosition - 300) / 55, 0),
+    1
+  );
 
   useEffect(() => {
     if (
@@ -20,10 +24,22 @@ export default function Skills() {
       } else setScrollPosition(scrollPositionOfElement);
     }
     return () => {};
-  }, [scrollPositionOfElement]);
+  }, [scrollPositionOfElement, scrollPosition]);
 
   return (
     <div className={`${style.body}`}>
+      <div
+        className="hello_backdrop_text"
+        aria-hidden="true"
+        style={{
+          opacity: 0.08 + backdropProgress * 0.18,
+          transform: `translateY(-50%) scale(${
+            0.62 + backdropProgress * 0.38
+          })`,
+        }}
+      >
+        Skills
+      </div>
       <div
         className={`${style.cards}`}
         ref={cardsRef}
@@ -206,7 +222,6 @@ export default function Skills() {
           </div>
         </div>
       </div>
-      <div className={`trans_header ${style.header}`}>Skills</div>
     </div>
   );
 }

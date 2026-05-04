@@ -71,6 +71,7 @@ height: calc(100vh - 10px);
   height: 85%;
   padding: 10px;
   margin: 10px;
+  z-index: 1;
 }
 
 .Big1 {

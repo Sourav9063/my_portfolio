@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import style from "./Projects.module.css";
 import svg from "./pattern.svg";
 import svg1 from "./pattern1.svg";
@@ -97,6 +97,9 @@ export default function Projects() {
             onMouseMoveFunc(event, gallery);
           }}
         >
+          <div className="hello_backdrop_text" aria-hidden="true">
+            Projects
+          </div>
           {/* Hall management */}
 
           <div
@@ -434,7 +437,7 @@ export default function Projects() {
         </div>
       </div>
     );
-  }, [showModal, scrollPosition]);
+  }, [showModal, selectedProject, scrollPosition]);
 }
 
 // let tmpup = 75;

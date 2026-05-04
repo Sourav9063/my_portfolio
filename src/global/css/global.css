@@ -78,6 +78,28 @@ a:hover,
     color: rgba(255, 255, 255, 0.119);
 }
 
+.hello_backdrop_text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.583);
+    font-size: clamp(8rem, 28vw, 32rem);
+    line-height: 0.72;
+    letter-spacing: 0;
+    opacity: 0.18;
+    transform: translateY(-50%) scale(1);
+    transform-origin: left center;
+    transition: opacity 700ms ease, transform 900ms ease;
+    background: linear-gradient(#ffffff94 0%, #ffffff00 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 18px rgba(255, 255, 255, 0.22);
+}
+
 
 .text_not_selectable {
     -webkit-touch-callout: none;
