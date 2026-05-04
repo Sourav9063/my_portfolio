@@ -130,7 +130,7 @@ export default function Contacts() {
         </GlassDiv>
       </div>
 
-      <EmailSection></EmailSection>
+      {/* <EmailSection></EmailSection> */}
     </div>
   );
 }

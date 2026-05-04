@@ -9,6 +9,7 @@ import Skills from "../skills/Skills";
 import Contacts from "../contacts/Contacts";
 import Stars from "../stars/stars";
 import Experience from "../experience/Experience";
+import Work from "../work/Work";
 import Links from "../../global/components/links/Links";
 import ProviderWrapper from "../../global/provider/ProviderWrapper";
 
@@ -24,6 +25,9 @@ export default function Home() {
         </section>
         <section id="projects">
           <Projects />
+        </section>
+        <section id="work">
+          <Work />
         </section>
         <section>
           <Skills />
