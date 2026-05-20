@@ -9,8 +9,9 @@
     height: calc(100dvh - 10px);
     display: grid;
     place-items: center;
-    z-index: 21;
+    z-index: 1;
     position: relative;
+    touch-action: none;
 }
 
 .beforeZ {
@@ -23,16 +24,13 @@
     /* z-index: 1; */
 }
 
-.star {
+.canvas {
     position: absolute;
-    /* background-color: hsl(257, 100%, 50%); */
-    border-radius: 50%;
-    /* width: 10px;
-    height: 10px; */
-    animation: starAni 30s ease infinite alternate;
-    transition: all 500ms ease;
-    opacity: 0;
-    z-index: 20;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
 }
 
 .debug {
@@ -128,40 +126,6 @@
     top: 58%;
     left: 34%;
     /* transform: translate(0, -50%); */
-}
-
-.light {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    /* background-color: blue; */
-    z-index: 19;
-    background: radial-gradient(circle at var(--x) var(--y), rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .5) 12%, rgba(0, 0, 0, .93) 25%);
-}
-
-@keyframes starAni {
-    0% {
-
-        opacity: var(--opacity);
-    }
-
-    30% {
-        opacity: .2;
-
-    }
-
-    70% {
-
-        opacity: .2;
-    }
-
-    100% {
-        opacity: var(--opacity);
-
-
-    }
 }
 
 /*  cubic-bezier(0.52, 0.22, 0.86, 0.37) */
