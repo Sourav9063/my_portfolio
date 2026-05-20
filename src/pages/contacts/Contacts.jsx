@@ -47,14 +47,14 @@ export default function Contacts() {
     >
       <RiveComponent className={`${style.rive}`} />
       <GlassDiv className={`${style.glassDivTop} ${style.glassDiv}`}>
-        <h2>I'm a student, studying Software Engineering at</h2>
+        <h2>Full-Stack Software Engineer, studied from </h2>
         <a
           className={`${style.sust}`}
           href="https://www.sust.edu/"
           target="_blank"
           rel="noreferrer"
         >
-          Shahjalal University of Science and Technology, Sylhet
+          Shahjalal University of Science and Technology
         </a>
       </GlassDiv>
 
