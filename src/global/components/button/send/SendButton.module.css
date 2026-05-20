@@ -84,6 +84,11 @@ strong {
   background: #FE53BB;
 }
 
+.btn:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
 .stars {
   position: relative;
   background: transparent;

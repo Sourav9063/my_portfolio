@@ -5,10 +5,16 @@ export default function SendButton({
   onClick,
   type = "button",
   btnTxt = "SEND",
+  disabled = false,
 }) {
   return (
     <>
-      <button className={style.btn} type={type}>
+      <button
+        className={style.btn}
+        disabled={disabled}
+        onClick={onClick}
+        type={type}
+      >
         <strong>{btnTxt}</strong>
         <div className={style["glow"]}>
           <div className={style["circle"]}></div>

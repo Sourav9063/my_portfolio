@@ -36,6 +36,16 @@
   color: rgb(146, 146, 146);
 }
 
+.status.status {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin: 0;
+  min-height: auto;
+  padding: 0.25rem 1rem;
+  text-align: center;
+}
+
 .h2.h2 {
   background-color: transparent;
   text-align: center;

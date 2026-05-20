@@ -3,7 +3,6 @@ import style from "./Contacts.module.css";
 import { useRive } from "@rive-app/react-canvas";
 import keyboard from "./keyboard.riv";
 import "../../global/css/global.css";
-import { Link } from "react-router-dom";
 import GlassDiv from "../../global/components/glassDiv/GlassDiv";
 import svg from "./ssscribble.svg";
 import svg1 from "./rrrainbow.svg";
@@ -130,7 +129,7 @@ export default function Contacts() {
         </GlassDiv>
       </div>
 
-      {/* <EmailSection></EmailSection> */}
+      <EmailSection></EmailSection>
     </div>
   );
 }
