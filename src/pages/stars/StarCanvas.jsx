@@ -61,7 +61,7 @@ export default function StarCanvas({
   minSize = 4,
   maxSize = 20,
   minTwinkleSpeed = 0.0005,
-  maxTwinkleSpeed = 0.00026,
+  maxTwinkleSpeed = 0.001,
   twinkleDepth = 0.60,
   maxDevicePixelRatio = 2,
   initialPointer = { x: 50, y: 50 },
