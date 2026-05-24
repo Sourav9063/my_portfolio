@@ -11,7 +11,7 @@
     place-items: center;
     z-index: 1;
     position: relative;
-    touch-action: none;
+    touch-action: pan-y pinch-zoom;
 }
 
 .beforeZ {
@@ -31,6 +31,7 @@
     height: 100%;
     display: block;
     z-index: 1;
+    touch-action: pan-y pinch-zoom;
 }
 
 .debug {

@@ -291,9 +291,16 @@ export default function StarCanvas({
       className={className}
       aria-hidden="true"
       onMouseMove={(e) => updatePointer(e.clientX, e.clientY)}
-      onTouchMove={(e) =>
+      onTouchStart={(e) =>
         updatePointer(e.touches[0].clientX, e.touches[0].clientY)
       }
+      onTouchMove={(e) => {
+        if (!e.touches.length) {
+          return;
+        }
+
+        updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+      }}
       onClick={onClick}
     />
   );
