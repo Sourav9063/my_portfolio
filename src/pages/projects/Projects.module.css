@@ -232,7 +232,7 @@
     background-color: rgb(61, 21, 180);
     height: 12.5%;
     width: 23%;
-    left: 50%;
+    left: 45%;
     top: 70%;
 }
 
@@ -252,7 +252,7 @@
     background-color: rgb(159, 173, 248);
     height: 12.5%;
     width: 23%;
-    left: 55%;
+    left: 50%;
     top: 71%;
     transform: rotate(10deg);
 }
@@ -275,6 +275,24 @@
     top: 42%;
     transform: rotate(10deg);
 
+}
+
+.flash {
+    background-color: #3e68d7;
+    height: 13%;
+    width: 23%;
+    left: 76%;
+    top: 70%;
+    z-index: 2;
+}
+
+.flash1 {
+    background-color: #ff007c;
+    height: 13%;
+    width: 23%;
+    left: 80%;
+    top: 71%;
+    z-index: 1;
 }
 
 /* .tile:nth-child(9) {

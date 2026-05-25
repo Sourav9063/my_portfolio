@@ -405,17 +405,23 @@ const projectsData = {
       "Implemented payment disbursement system with automated payouts and reconciliation dashboard for creative marketplace.",
     tech: ["NextJS", "MongoDB"],
   },
-  "Flash VSCode": {
-    title: "Flash VSCode",
-    images: [],
+  "Flash Nvim for VSCode": {
+    title: "Flash Nvim for VSCode",
+    images: [
+      "https://github.com/user-attachments/assets/9a416efd-0927-4df8-b1f1-81d1582f328c",
+      "https://github.com/user-attachments/assets/b63c4987-9d73-4995-914a-4b6ceddbdfd6",
+      "https://github.com/user-attachments/assets/e2f932e3-73c6-4acd-9d8c-9937bb116821",
+    ],
+    videos: [
+      "https://github.com/Sourav9063/flash-nvim-for-vscode/raw/refs/heads/main/assets/444379853-b4660aa8-dd2d-4c9f-9622-c01521747a76.mp4",
+    ],
     links: [
-      "https://github.com/Sourav9063",
+      "https://github.com/Sourav9063/flash-nvim-for-vscode",
       "https://marketplace.visualstudio.com/items?itemName=souravahmed.flash-vscode-latest",
-      "https://open-vsx.org/extension/souravahmed/flash-vscode-latest",
     ],
     description:
-      "Published extension porting flash.nvim navigation to VS Code with 1500+ installs, 5-star rating, intelligent search, and multi-cursor support. Available on Open VSX.",
-    tech: ["TypeScript", "VSCode API"],
+      "Fast, precise, label-based code navigation inspired by Neovim's flash.nvim plugin. Jump to visible targets in 2-3 keystrokes, select symbols and code scopes, and integrate with VSCodeVim without requiring Vim knowledge.",
+    tech: ["TypeScript", "VSCode API", "Tree-sitter", "VSCodeVim"],
   },
   "IPA Transcription of Bengali Texts": {
     title: "IPA Transcription of Bengali Texts (arXiv 2024)",

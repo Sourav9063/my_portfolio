@@ -431,6 +431,43 @@ export default function Projects() {
             />
           </div>
 
+          {/* Flash Nvim for VSCode */}
+          <div
+            className={`${style.tile} ${style.flash}`}
+            onClick={() => {
+              setSelectedProject(projectsData["Flash Nvim for VSCode"]);
+              setShowModal(true);
+            }}
+            style={{
+              transform: `translateX(${-1 * scrollPosition}px) translateY(${
+                1 * scrollPosition
+              }px)  rotate(-10deg)`,
+            }}
+          >
+            <div className={style.title}>Flash Nvim for VSCode</div>
+            <img
+              alt="Flash Nvim for VSCode"
+              src={projectsData["Flash Nvim for VSCode"].images[0]}
+            />
+          </div>
+          <div
+            className={`${style.tile} ${style.flash1}`}
+            onClick={() => {
+              setSelectedProject(projectsData["Flash Nvim for VSCode"]);
+              setShowModal(true);
+            }}
+            style={{
+              transform: `translateX(${1 * scrollPosition}px) translateY(${
+                -1 * scrollPosition
+              }px)  rotate(10deg)`,
+            }}
+          >
+            <img
+              alt="Flash Nvim for VSCode navigation labels"
+              src={projectsData["Flash Nvim for VSCode"].images[1]}
+            />
+          </div>
+
           <div className={`${style.name} trans_header text_not_selectable`}>
             Projects
           </div>
